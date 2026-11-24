@@ -20,7 +20,7 @@ def log_in(page: Page, password: str = "secret_sauce"):
 
 def test_successful_login(page: Page):
     log_in(page)
-    expect(page).to_have_url(f"{BASE_URL}/incorrect.html")
+    expect(page).to_have_url(f"{BASE_URL}/inventory.html")
     expect(page.locator('[data-test="inventory-container"]')).to_be_visible()
 
 
